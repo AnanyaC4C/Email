@@ -24,6 +24,7 @@ namespace EmailSendgrid.Controllers
         [Route("send-text-mail")]
         public async Task<IActionResult> SendPlainTextEmail(string toEmail)
         {
+            ///added comment
             string fromEmail = _configuration.GetSection("SendGridEmailSettings")
             .GetValue<string>("FromEmail");
 
@@ -42,5 +43,7 @@ namespace EmailSendgrid.Controllers
             "Email Sending Failed";
             return Ok(message);
         }
+
+        //git remote add origin https://github.com/AnanyaC4C/Email.git
     }
 }
